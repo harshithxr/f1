@@ -3,13 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git branch: 'master',
-                url: 'https://github.com/USERNAME/MyMavenApp.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'mvn clean package'
